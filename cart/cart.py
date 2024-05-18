@@ -76,8 +76,8 @@ class Cart():
 			key = int(key)
 			for product in products:
 				if product.id == key:
-					if product.is_Sale:
-						total = total + (product.Sale_price * value)
+					if product.is_sale:
+						total = total + (product.sale_price * value)
 					else:
 						total = total + (product.price * value)
 
@@ -146,4 +146,3 @@ class Cart():
 			carty = carty.replace("\'", "\"")
 			# Save carty to the Profile Model
 			current_user.update(old_cart=str(carty))
-    
